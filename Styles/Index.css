@@ -1,0 +1,314 @@
+body {
+	overflow-x: hidden;
+	background-color: #060606 /* almost black*/
+}
+
+table, th, td {
+	position: relative;
+	display: block;
+	padding: 10px 15px
+    margin-bottom -1px;
+    background-color: #222222;
+    border: 1px solid #282828;
+    width: 600px;
+}
+
+hr {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	border-top: 2px solid #888888;
+	box-sizing: content-box;
+	height: 0;
+	min-width: 700px;
+	float:center;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #222222;
+}
+
+.topnav a {
+  float: left;
+  color: #2a9fd6;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#Contact {
+	float: right;
+	padding-right: 30px;
+}
+
+#alerts_header, #Cetus_header, #Sortie_header, #Void_header, 
+#Syndicate_header,#Trader_header,#Darvo_header, #Invasion_header,
+#Daily_header, #News_header {
+	color: white;
+}
+
+.contactInfo {
+	color: white;
+	text-align: center;
+	width: 500px;
+	margin: 0 auto;
+}
+
+.sortie, .cetusNite, .alerts, .fissures, .darvo, .synTimer, .baroTimer{
+    display: inline;
+    min-width: 78px;
+    padding: 3px 7px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: #2a9fd6;
+    border-radius: 10px;
+    float: right;
+    margin-right: 10px;
+}
+
+.alertsStart {
+    display: inline;
+    min-width: 78px;
+    padding: 3px 7px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: gray;
+    border-radius: 10px;
+    float: right;
+    margin-right: 10px;
+}
+
+.dailyTimer, .reward, .Tier, .timer, .syn {
+	display: inline;
+    min-width: 60px;
+    padding: 3px 7px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: green;
+    border-radius: 10px;
+    float: right;
+    margin-right: 10px;
+}
+
+.invasionsGreenLeft {
+	display: inline;
+    min-width: 60px;
+    padding: 3px 7px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: green;
+    border-radius: 10px;
+    margin-left: 10px;
+    position: absolute;
+    top: -10px;
+    left:0px;
+}
+
+.invasionsGreenRight {
+	display: inline;
+    min-width: 60px;
+    padding: 3px 7px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: green;
+    border-radius: 10px;
+    margin-right: 10px;
+    position: absolute;
+    top: -10px;
+    right: 0px;
+}
+
+.fissureMeso, .fissureAxi, .price{
+	display: inline;
+    min-width: 60px;
+    padding: 3px 7px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: purple;
+    border-radius: 10px;
+    float: right;
+    margin-right: 10px;
+}
+
+.fissureLith, .fissureNeo, .reward{
+    display: inline;
+    min-width: 60px;
+    padding: 3px 7px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: green;
+    border-radius: 10px;
+    float: right;
+    margin-right: 10px;
+}
+
+.cetus  {
+	display: inline;
+    min-width: 78px;
+    padding: 3px 7px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    background-color: orange;
+    border-radius: 10px;
+    float: right;
+    margin-right: 10px;
+}
+
+ #Cetus, #Daily, #Alerts, #Void, #Darvo, #News, #Syndicate, #Baro, #Invasions{
+	border: 2px solid #2a9fd6;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 16px;
+	margin: 0 auto;
+	background-color: #222222;
+	width: 800px;
+}
+
+#Sortie{
+    border: 2px solid #2a9fd6;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 16px;
+    margin: 0 auto;
+    background-color: #222222;
+    width: 800px;
+    text-align: center;
+}
+
+#white {
+	max-width: 400px;
+	position: relative;
+	display: inline-block;
+	color: white;
+	padding-left: 10px;
+  	text-decoration: none;
+  	font-size: 14px;
+  	font-weight: bold;
+}
+
+.invasionsNode {
+    max-width: 400px;
+    display: inline;
+    position: absolute;
+    left: 30%;
+    top: -5px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#white2 {
+	max-width: 400px;
+	position: relative;
+	display: inline-block;
+	color: white;
+	padding-left: 10px;
+  	text-decoration: none;
+  	font-size: 14px;
+  	font-weight: bold;
+}
+
+#sortieBoss, #voidTrader{
+	max-width: 400px;
+	position: relative;
+	display: inline-block;
+	color: #2a9fd6;
+	padding-left: 10px;
+  	text-decoration: none;
+  	font-size: 18px;
+  	font-weight: bold;
+}
+
+#wrapSortie {
+	border: 1px solid white;
+	border-radius: 16px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.invasions {
+    border: 1px solid white;
+    border-radius: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    height: 60px;
+}
+
+#wrap {
+	border: 1px solid white;
+	border-radius: 16px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	min-width: 750px;
+    text-align: left;
+}
+
+#myProgress {
+    width: 99%;
+    background-color: red;
+    border-radius: 10px;
+    margin: 0px 0px 10px 3px;
+}
+
+#myBar {
+    height: 30px;
+    background-color: green;
+    border-radius: 10px;
+}
+
+#container {
+    position: relative;
+}
