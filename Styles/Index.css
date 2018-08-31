@@ -24,9 +24,35 @@ hr {
 	float:center;
 }
 
+h2 {
+    color:white;
+    -webkit-margin-after: 0em;
+    -webkit-margin-before: 0em;
+    text-align: center;
+}
+
+h3 {
+    color:white;
+    -webkit-margin-after: 0em;
+    -webkit-margin-before: 0em;
+    text-align: center;  
+}
+h4 {
+    color:white;
+    -webkit-margin-after: 0em;
+    -webkit-margin-before: 0em;
+    text-align: center;   
+}
+
 .topnav {
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left:0px;
+  max-height: 47.6px;
   overflow: hidden;
   background-color: #222222;
+  z-index: 2;
 }
 
 .topnav a {
@@ -45,6 +71,66 @@ hr {
   color: black;
 }
 
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 125px;
+  position: fixed;
+  z-index: 1;
+  top:47.6px;
+  left: 0px;
+  background-color: #222222;
+  overflow-x: hidden;
+  overflow-y: hidden; /*unhide if want scroll bar vertical*/
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
 #Contact {
 	float: right;
 	padding-right: 30px;
@@ -52,7 +138,7 @@ hr {
 
 #alerts_header, #Cetus_header, #Sortie_header, #Void_header, 
 #Syndicate_header,#Trader_header,#Darvo_header, #Invasion_header,
-#Daily_header, #News_header {
+#Daily_header, #News_header{
 	color: white;
 }
 
@@ -213,6 +299,9 @@ hr {
 	width: 800px;
 }
 
+
+
+
 #Sortie{
     border: 2px solid #2a9fd6;
     padding-left: 10px;
@@ -234,6 +323,43 @@ hr {
   	font-size: 14px;
   	font-weight: bold;
 }
+#white2 {
+    max-width: 400px;
+    position: relative;
+    display: inline-block;
+    color: white;
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+#whiteWeapon {
+    width: 350px;
+    position: relative;
+    color: white;
+    display: inline-block;
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: -10px;
+    margin-top: 0px;
+}
+
+#whiteWeaponDesc {
+    width: 350px;
+    height: 100px;
+    position: relative;
+    color: white;
+    display: inline-block;
+    padding-left: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: -10px;
+    margin-top: 0px;
+}
 
 .invasionsNode {
     max-width: 400px;
@@ -247,16 +373,7 @@ hr {
     font-weight: bold;
 }
 
-#white2 {
-	max-width: 400px;
-	position: relative;
-	display: inline-block;
-	color: white;
-	padding-left: 10px;
-  	text-decoration: none;
-  	font-size: 14px;
-  	font-weight: bold;
-}
+
 
 #sortieBoss, #voidTrader{
 	max-width: 400px;
@@ -293,6 +410,47 @@ hr {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	min-width: 750px;
+    text-align: left;
+}
+
+
+/* Flex help: https://yoksel.github.io/flex-cheatsheet/#flex-wrap  */
+.weaponWrap {
+    display: inline-flex;
+    align-items: flex-start;
+    max-width: 375px;
+    flex-wrap: wrap;
+    border: 2px solid white;
+    border-radius: 16px;
+    margin: 5px 0px 5px 14px;
+    min-height: 1550px;
+}
+#spaceHolder {
+    width: 350px;
+    height: 500px;
+}
+
+
+/*
+.weaponWrap {
+    display: inline-block;
+    border: 2px solid white;
+    border-radius: 16px;
+    margin: 10px 0px 10px 14px;
+    width: 375px;
+    text-align: left;
+} */
+
+#weaponAlignment {
+    float: left;
+}
+
+.itemWrap {
+    border: 2px solid white;
+    border-radius: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-width: 750px;
     text-align: left;
 }
 
