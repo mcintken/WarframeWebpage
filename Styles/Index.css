@@ -86,7 +86,7 @@ h4 {
 }
 
 /* Style the sidenav links and the dropdown button */
-.sidenav a, .dropdown-btn {
+.sidenav a {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
   font-size: 20px;
@@ -101,35 +101,11 @@ h4 {
 }
 
 /* On mouse-over */
-.sidenav a:hover, .dropdown-btn:hover {
+.sidenav a:hover {
   color: #f1f1f1;
 }
 
-/* Main content */
-.main {
-  margin-left: 200px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 10px;
-}
 
-/* Add an active class to the active dropdown button */
-.active {
-  background-color: green;
-  color: white;
-}
-
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
-  display: none;
-  background-color: #262626;
-  padding-left: 8px;
-}
-
-/* Optional: Style the caret down icon */
-.fa-caret-down {
-  float: right;
-  padding-right: 8px;
-}
 
 #Contact {
 	float: right;
@@ -299,9 +275,6 @@ h4 {
 	width: 800px;
 }
 
-
-
-
 #Sortie{
     border: 2px solid #2a9fd6;
     padding-left: 10px;
@@ -333,32 +306,6 @@ h4 {
     font-size: 14px;
     font-weight: bold;
 
-}
-#whiteWeapon {
-    width: 350px;
-    position: relative;
-    color: white;
-    display: inline-block;
-    padding-left: 10px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: -10px;
-    margin-top: 0px;
-}
-
-#whiteWeaponDesc {
-    width: 350px;
-    height: 100px;
-    position: relative;
-    color: white;
-    display: inline-block;
-    padding-left: 10px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: -10px;
-    margin-top: 0px;
 }
 
 .invasionsNode {
@@ -413,38 +360,6 @@ h4 {
     text-align: left;
 }
 
-
-/* Flex help: https://yoksel.github.io/flex-cheatsheet/#flex-wrap  */
-.weaponWrap {
-    display: inline-flex;
-    align-items: flex-start;
-    max-width: 375px;
-    flex-wrap: wrap;
-    border: 2px solid white;
-    border-radius: 16px;
-    margin: 5px 0px 5px 14px;
-    min-height: 1550px;
-}
-#spaceHolder {
-    width: 350px;
-    height: 500px;
-}
-
-
-/*
-.weaponWrap {
-    display: inline-block;
-    border: 2px solid white;
-    border-radius: 16px;
-    margin: 10px 0px 10px 14px;
-    width: 375px;
-    text-align: left;
-} */
-
-#weaponAlignment {
-    float: left;
-}
-
 .itemWrap {
     border: 2px solid white;
     border-radius: 16px;
@@ -469,4 +384,17 @@ h4 {
 
 #container {
     position: relative;
+}
+
+
+#pic {
+    height: auto;
+    max-width: 100%;
+}
+
+
+/*Also helps keep text aligned up on the Items page (Primary, secondary, melee)*/
+.imgContainer {
+    width: 375px;
+    height: 275px;
 }
