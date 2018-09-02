@@ -320,10 +320,10 @@ function setUpSyndicate(){
 				}
 				nodes += singleNodes[singleNodes.length -1];
 				$('#Syndicate').append("<div id =\"wrap\">"+
-											"<p id = \"white\">"+ nodes +"</p>"+
-											"<p class = synTimer id =\"syn" + i +"\">...</p>"+
-											"<p class=\"syn\">"+ synData[i].syndicate + "</p>"+
-										"</div>");
+					"<p id = \"white\">"+ nodes +"</p>"+
+					"<p class = synTimer id =\"syn" + i +"\">...</p>"+
+					"<p class=\"syn\">"+ synData[i].syndicate + "</p>"+
+				"</div>");
 				var timer = "syn"+i;
 				setTimer(expSyn,timer, 0, "active");
 			}
@@ -341,21 +341,21 @@ function setUpBaro(){
 		var now = new Date();
 		if(baroStart - now >0){ //Baro hasn't arrived at a Relay
 			$('#Baro').append("<div id =\"wrap\">"+
-									"<p id=\"voidTrader\">" + baroData.character + " | Coming to: " + baroData.location +"</p>"+
-									"<p class = \"baroTimer\" id=\"baro\">...</p>"+
-								"</div>");
+				"<p id=\"voidTrader\">" + baroData.character + " | Coming to: " + baroData.location +"</p>"+
+				"<p class = \"baroTimer\" id=\"baro\">...</p>"+
+			"</div>");
 			setTimer(baroStart,'baro',0, 'start');
 		}else{ //Baro has arrived at a Relay
 			$('#Baro').append("<div id =\"wrap\">"+
-									"<p id=\"voidTrader\">" + baroData.character + " | Located at: " + baroData.location +"</p>"+
-									"<p class = \"baroTimer\" id=\"baro\">...</p>"+
-								"</div>");
+				"<p id=\"voidTrader\">" + baroData.character + " | Located at: " + baroData.location +"</p>"+
+				"<p class = \"baroTimer\" id=\"baro\">...</p>"+
+			"</div>");
 			setTimer(baroEnd, 'baro',0, "active");
 			for(var i = 0; i<baroData.inventory.length; i++){ //Add baro's wares to #Baro
 				$('#Baro').append("<div id = \"wrap\">"+
-										"<p id=\"white\">" + baroData.inventory[i].item + "</p>"+
-										"<p class = \"price\">"+ baroData.inventory[i].ducats + " ducats | "+ baroData.inventory[i].credits + " credits" +"</p>"+
-									"</div>");
+					"<p id=\"white\">" + baroData.inventory[i].item + "</p>"+
+					"<p class = \"price\">"+ baroData.inventory[i].ducats + " ducats | "+ baroData.inventory[i].credits + " credits" +"</p>"+
+				"</div>");
 			}
 		}
 	});	
@@ -384,35 +384,35 @@ function setUpInvasions(){
 				if(invData[i].attackerReward.countedItems.length > 0 ){
 					if(invData[i].attackerReward.countedItems[0].count > 1){ //more then 1 reward of same time
 						$('#Invasions').append("<div class = \"invasions\">"+
-													"<br>"+
-													"<p class = \"invasionsNode\">"+ invData[i].node + " | " + invData[i].attackingFaction + " vs " + invData[i].defendingFaction + " | " + percent + "% left"+"</p>"+
-													"<p class = \"invasionsGreenLeft\" id=\"leftDrop"+i+"\">"+invData[i].attackerReward.countedItems[0].count + " " + invData[i].attackerReward.countedItems[0].type + "</p>"+
-													"<p class = \"invasionsGreenRight\" id=\"rightDrop"+i+"\">"+ invData[i].defenderReward.countedItems[0].count + " " + invData[i].defenderReward.countedItems[0].type + "</p>"+
-													"<div  id=\"myProgress"+i+"\" style=\"width:99%;background-color:red;border-radius:10px;margin:0px 0px 10px 3px;position:absolute;top:25px;\">"+
-														"<div id=\"container\">"+
-															"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;top:-1px;\">"+
-															"<img id=\"right"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;right:6px;top:-1px;\">"+
-														"</div>"+
-														"<div id=\"myBar"+i +"\" style=\"width:"+ percent+"%;height:30px;background-color:green;border-radius:10px\">"+
-															"</div>"+
-													"</div>"+
-												"</div>");
+							"<br>"+
+							"<p class = \"invasionsNode\">"+ invData[i].node + " | " + invData[i].attackingFaction + " vs " + invData[i].defendingFaction + " | " + percent + "% left"+"</p>"+
+							"<p class = \"invasionsGreenLeft\" id=\"leftDrop"+i+"\">"+invData[i].attackerReward.countedItems[0].count + " " + invData[i].attackerReward.countedItems[0].type + "</p>"+
+							"<p class = \"invasionsGreenRight\" id=\"rightDrop"+i+"\">"+ invData[i].defenderReward.countedItems[0].count + " " + invData[i].defenderReward.countedItems[0].type + "</p>"+
+							"<div  id=\"myProgress"+i+"\" style=\"width:99%;background-color:red;border-radius:10px;margin:0px 0px 10px 3px;position:absolute;top:25px;\">"+
+								"<div id=\"container\">"+
+									"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;top:-1px;\">"+
+									"<img id=\"right"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;right:6px;top:-1px;\">"+
+								"</div>"+
+								"<div id=\"myBar"+i +"\" style=\"width:"+ percent+"%;height:30px;background-color:green;border-radius:10px\">"+
+									"</div>"+
+							"</div>"+
+						"</div>");
 					}
 					else{ // 1 reward
 						$('#Invasions').append("<div class = \"invasions\">"+
-													"<br>"+
-													"<p class = \"invasionsNode\">"+ invData[i].node + " | " + invData[i].attackingFaction + " vs " + invData[i].defendingFaction + " | " + percent + "% left"+"</p>"+
-													"<p class = \"invasionsGreenLeft\" id=\"leftDrop"+i+"\">"+ invData[i].attackerReward.countedItems[0].type + "</p>"+
-													"<p class = \"invasionsGreenRight\" id=\"rightDrop"+i+"\">"	+ invData[i].defenderReward.countedItems[0].type + "</p>"+
-													"<div id=\"myProgress"+i+"\" style=\"width:99%;background-color:red;border-radius:10px;margin:0px 0px 10px 3px;position:absolute;top:25px;\">"+
-														"<div id=\"container\">"+
-															"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;top:-1px;\">"+
-															"<img id=\"right"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;right:6px;top:-1px;\">"+
-														"</div>"+
-														"<div id=\"myBar"+i +"\" style=\"width:"+ percent+"%;height:30px;background-color:green;border-radius:10px\">"+
-														"</div>"+
-													"</div>"+
-												"</div>");
+							"<br>"+
+							"<p class = \"invasionsNode\">"+ invData[i].node + " | " + invData[i].attackingFaction + " vs " + invData[i].defendingFaction + " | " + percent + "% left"+"</p>"+
+							"<p class = \"invasionsGreenLeft\" id=\"leftDrop"+i+"\">"+ invData[i].attackerReward.countedItems[0].type + "</p>"+
+							"<p class = \"invasionsGreenRight\" id=\"rightDrop"+i+"\">"	+ invData[i].defenderReward.countedItems[0].type + "</p>"+
+							"<div id=\"myProgress"+i+"\" style=\"width:99%;background-color:red;border-radius:10px;margin:0px 0px 10px 3px;position:absolute;top:25px;\">"+
+								"<div id=\"container\">"+
+									"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;top:-1px;\">"+
+									"<img id=\"right"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;right:6px;top:-1px;\">"+
+								"</div>"+
+								"<div id=\"myBar"+i +"\" style=\"width:"+ percent+"%;height:30px;background-color:green;border-radius:10px\">"+
+								"</div>"+
+							"</div>"+
+						"</div>");
 
 						//change the background color to blue for weapon parts or other items that aren't a resoucre. (bp, weapon parts, ex adapter, reactor, catalyst)
 						if(invData[i].defenderReward.countedItems[0].type != "Feildron" && invData[i].defenderReward.countedItems[0].type != "Detonite Injector" 
@@ -426,32 +426,32 @@ function setUpInvasions(){
 				else{ //1 item with reward
 					if(invData[i].defenderReward.countedItems[0].count > 1){ // 1 reward with multiple of it
 						$('#Invasions').append("<div class = \"invasions\">"+
-													"<br>"+
-													"<p class = \"invasionsNode\">"+ invData[i].node + " | " + invData[i].attackingFaction + " vs " + invData[i].defendingFaction + " | " + percent + "% left"+"</p>"+
-													"<p class = \"invasionsGreenRight\" id=\"rightDrop"+i+"\">"+ invData[i].defenderReward.countedItems[0].count + " " + invData[i].defenderReward.countedItems[0].type + "</p>"+
-													"<div  id=\"myProgress"+i+"\" style=\"width:99%;background-color:red;border-radius:10px;margin:0px 0px 10px 3px;position:absolute;top:25px;\">"+
-														"<div id=\"container\">"+
-															"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;top:-1px;\">"+
-															"<img id=\"right"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;right:6px;top:-1px;\">"+
-														"</div>"+
-														"<div id=\"myBar"+i +"\" style=\"width:"+ percent+"%;height:30px;background-color:green;border-radius:10px\">"+
-														"</div>"+
-													"</div>"+
-												"</div>");				
+						"<br>"+
+						"<p class = \"invasionsNode\">"+ invData[i].node + " | " + invData[i].attackingFaction + " vs " + invData[i].defendingFaction + " | " + percent + "% left"+"</p>"+
+						"<p class = \"invasionsGreenRight\" id=\"rightDrop"+i+"\">"+ invData[i].defenderReward.countedItems[0].count + " " + invData[i].defenderReward.countedItems[0].type + "</p>"+
+						"<div  id=\"myProgress"+i+"\" style=\"width:99%;background-color:red;border-radius:10px;margin:0px 0px 10px 3px;position:absolute;top:25px;\">"+
+							"<div id=\"container\">"+
+								"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;top:-1px;\">"+
+								"<img id=\"right"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;right:6px;top:-1px;\">"+
+							"</div>"+
+							"<div id=\"myBar"+i +"\" style=\"width:"+ percent+"%;height:30px;background-color:green;border-radius:10px\">"+
+							"</div>"+
+						"</div>"+
+					"</div>");				
 					}else{
 						$('#Invasions').append("<div class = \"invasions\">"+
-													"<br>"+
-													"<p class = \"invasionsNode\">"+ invData[i].node + " | " + invData[i].attackingFaction + " vs " + invData[i].defendingFaction + " | " + percent + "% left"+"</p>"+
-													"<p class = \"invasionsGreenRight\" id=\"rightDrop"+i+"\">"+ invData[i].defenderReward.countedItems[0].type + "</p>"+
-													"<div  id=\"myProgress"+i +"\" style=\"width:99%;background-color:red;border-radius:10px;margin:0px 0px 10px 3px;position:absolute;top:25px;\">"+
-														"<div id=\"container\">"+
-															"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;top:-1px;\">"+
-															"<img id=\"right"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;right:6px;top:-1px;\">"+
-														"</div>"+
-														"<div id=\"myBar"+i +"\" style=\"width:"+ percent+"%;height:30px;background-color:green;border-radius:10px\">"+
-														"</div>"+
-													"</div>"+
-												"</div>");
+							"<br>"+
+							"<p class = \"invasionsNode\">"+ invData[i].node + " | " + invData[i].attackingFaction + " vs " + invData[i].defendingFaction + " | " + percent + "% left"+"</p>"+
+							"<p class = \"invasionsGreenRight\" id=\"rightDrop"+i+"\">"+ invData[i].defenderReward.countedItems[0].type + "</p>"+
+							"<div  id=\"myProgress"+i +"\" style=\"width:99%;background-color:red;border-radius:10px;margin:0px 0px 10px 3px;position:absolute;top:25px;\">"+
+								"<div id=\"container\">"+
+									"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;top:-1px;\">"+
+									"<img id=\"right"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;right:6px;top:-1px;\">"+
+								"</div>"+
+								"<div id=\"myBar"+i +"\" style=\"width:"+ percent+"%;height:30px;background-color:green;border-radius:10px\">"+
+								"</div>"+
+							"</div>"+
+						"</div>");
 					
 						//change the background color to blue for weapon parts or other items that aren't a resoucre. (bp, weapon parts, ex adapter, reactor, catalyst)
 						if(invData[i].defenderReward.countedItems[0].type != "Feildron" && invData[i].defenderReward.countedItems[0].type != "Detonite Injector" 

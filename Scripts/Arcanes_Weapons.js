@@ -4,6 +4,7 @@
 //**  Author: Ken McIntosh
 //******************************************************************************
 $(document).ready(function () {
+	console.log("loading arcanes");
 	loadArcanes();
 	loadWeapons();
 });
@@ -35,12 +36,12 @@ function loadArcanes(){
 				//location
 				//info: wiki
 				$('#Arcanes').append("<div class =\"itemWrap\" id=\"arcane"+ i + "\">"+
-						"<p class=\"Arc_Name\" id=\"arc_Name"+i+"\">"+voidArcanes[i].name +"</p>"+
-						"<p class=\"Arc_Rarity\" id= \"arc_Rarity" + i +"\">"+voidArcanes[i].rarity+"</p>"+
-						"<p id=\"arc_Effect\"> EFFECT: "+voidArcanes[i].effect+"</p>"+
-						"<p class = \"Arc_Loc\" id=\"arc_Loc"+ i + "\">LOCATION: Drops from Plains of Eidolon (POE) on Earth.</p>"+
-						"<a id=\"arc_Info\" href=\""+voidArcanes[i].info +"\" target=\"_blank\">Wiki Info</a>"+
-					"</div>");
+					"<p class=\"Arc_Name\" id=\"arc_Name"+i+"\">"+voidArcanes[i].name +"</p>"+
+					"<p class=\"Arc_Rarity\" id= \"arc_Rarity" + i +"\">"+voidArcanes[i].rarity+"</p>"+
+					"<p id=\"arc_Effect\"> EFFECT: "+voidArcanes[i].effect+"</p>"+
+					"<p class = \"Arc_Loc\" id=\"arc_Loc"+ i + "\">LOCATION: Drops from Plains of Eidolon (POE) on Earth.</p>"+
+					"<a id=\"arc_Info\" href=\""+voidArcanes[i].info +"\" target=\"_blank\">Wiki Info</a>"+
+				"</div>");
 
 				var nameCheck = "";
 				var num = 0;
@@ -129,26 +130,26 @@ function addWeapon (weapon, weaponNum, category){
 	}
 
 	$('#'+category).append("<div class =\"weaponWrap\">"+
-				"<div class=\"title_Descript_Container\">"+
-					"<h2>"+weapon.name + "</h2>"+
-					"<p id = \"whiteWeapon\">Type: "+weapon.type +"</p>"+
-					"<p id = \"whiteWeaponDesc\">"+weapon.description +"</p>"+
-					"<div id=\""+category+weaponNum+"\">"+
-					"</div>"+
-				"</div>"+
-			"</div>");
+		"<div class=\"title_Descript_Container\">"+
+			"<h2>"+weapon.name + "</h2>"+
+			"<p id = \"whiteWeapon\">Type: "+weapon.type +"</p>"+
+			"<p id = \"whiteWeaponDesc\">"+weapon.description +"</p>"+
+			"<div id=\""+category+weaponNum+"\">"+
+			"</div>"+
+		"</div>"+
+	"</div>");
 
 	//have to check to make sure it has wikiaThumbnail as not all do
 	
 	if(weapon.wikiaThumbnail != null){
 		//add the image next
 		$("#"+category+weaponNum).append("<div class = \"imgContainer\">"+
-					"<img id = \"pic\" + src="+weapon.wikiaThumbnail+">"+
-				"</div>");
+			"<img id = \"pic\" + src="+weapon.wikiaThumbnail+">"+
+		"</div>");
 	}else{
 		$("#"+category+weaponNum).append("<div class = \"imgContainer\">"+
-					"<p id = \"whiteWeapon\" style=\"text-align: center;\">No Image URL In JSON</p>"+
-				"</div>");
+			"<p id = \"whiteWeapon\" style=\"text-align: center;\">No Image URL In JSON</p>"+
+		"</div>");
 	}
 
 	if(category == "Primary" || category == "Secondary"){
@@ -167,12 +168,12 @@ function addWeapon (weapon, weaponNum, category){
 	else{
 		//it has a bp and compents more checks required to make sure its valid information
 		$("#"+category+weaponNum).append("<h3>Blueprint Requirements</h3>"+
-					"<p> </p>"+ //empty space padding
-					"<p id = \"whiteWeapon\">Build Price: "+weapon.buildPrice +"cc</p>" +
-					"<p id = \"whiteWeapon\">Build Time: "+ (weapon.buildTime / (60*60)) +" hours</p>"+ //sec -> hrs
-					"<p id = \"whiteWeapon\">Price to Rush Build: "+weapon.skipBuildTimePrice +" Platinum</p>" +
-					"<p id = \"whiteWeapon\">Build Price: "+weapon.buildPrice +"cc</p>"+
-					"<h4>Blueprint Crafting Components<h4>");
+			"<p> </p>"+ //empty space padding
+			"<p id = \"whiteWeapon\">Build Price: "+weapon.buildPrice +"cc</p>" +
+			"<p id = \"whiteWeapon\">Build Time: "+ (weapon.buildTime / (60*60)) +" hours</p>"+ //sec -> hrs
+			"<p id = \"whiteWeapon\">Price to Rush Build: "+weapon.skipBuildTimePrice +" Platinum</p>" +
+			"<p id = \"whiteWeapon\">Build Price: "+weapon.buildPrice +"cc</p>"+
+			"<h4>Blueprint Crafting Components<h4>");
 
 		//Compents can have different amounts of items in the components[]
 		//each comp should have:
@@ -183,10 +184,10 @@ function addWeapon (weapon, weaponNum, category){
 				//	tradeable		
 		for(var comp = 0; comp < weapon.components.length; comp++){
 			$("#"+category+weaponNum).append("<p id = \"whiteWeapon\">Component Piece: "+ weapon.components[comp].name +"</p>"+
-					"<p id = \"whiteWeapon\">Components Description: "+weapon.components[comp].description +"</p>"+
-					"<p id = \"whiteWeapon\">Component Count: "+weapon.components[comp].itemCount +"</p>"+
-					"<p id = \"whiteWeapon\">Component Tradeable: "+weapon.components[comp].tradable +"</p>"+
-					"<p> <p>");
+				"<p id = \"whiteWeapon\">Components Description: "+weapon.components[comp].description +"</p>"+
+				"<p id = \"whiteWeapon\">Component Count: "+weapon.components[comp].itemCount +"</p>"+
+				"<p id = \"whiteWeapon\">Component Tradeable: "+weapon.components[comp].tradable +"</p>"+
+				"<p> <p>");
 		} 
 	}
 }
