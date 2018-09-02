@@ -390,7 +390,7 @@ function setUpInvasions(){
 													"<p class = \"invasionsGreenRight\" id=\"rightDrop"+i+"\">"+ invData[i].defenderReward.countedItems[0].count + " " + invData[i].defenderReward.countedItems[0].type + "</p>"+
 													"<div  id=\"myProgress"+i+"\" style=\"width:99%;background-color:red;border-radius:10px;margin:0px 0px 10px 3px;position:absolute;top:25px;\">"+
 														"<div id=\"container\">"+
-															"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;z-index:5;top:-1px;\">"+
+															"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;top:-1px;\">"+
 															"<img id=\"right"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;right:6px;top:-1px;\">"+
 														"</div>"+
 														"<div id=\"myBar"+i +"\" style=\"width:"+ percent+"%;height:30px;background-color:green;border-radius:10px\">"+
@@ -406,7 +406,7 @@ function setUpInvasions(){
 													"<p class = \"invasionsGreenRight\" id=\"rightDrop"+i+"\">"	+ invData[i].defenderReward.countedItems[0].type + "</p>"+
 													"<div id=\"myProgress"+i+"\" style=\"width:99%;background-color:red;border-radius:10px;margin:0px 0px 10px 3px;position:absolute;top:25px;\">"+
 														"<div id=\"container\">"+
-															"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;z-index:5;top:-1px;\">"+
+															"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;top:-1px;\">"+
 															"<img id=\"right"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;right:6px;top:-1px;\">"+
 														"</div>"+
 														"<div id=\"myBar"+i +"\" style=\"width:"+ percent+"%;height:30px;background-color:green;border-radius:10px\">"+
@@ -431,7 +431,7 @@ function setUpInvasions(){
 													"<p class = \"invasionsGreenRight\" id=\"rightDrop"+i+"\">"+ invData[i].defenderReward.countedItems[0].count + " " + invData[i].defenderReward.countedItems[0].type + "</p>"+
 													"<div  id=\"myProgress"+i+"\" style=\"width:99%;background-color:red;border-radius:10px;margin:0px 0px 10px 3px;position:absolute;top:25px;\">"+
 														"<div id=\"container\">"+
-															"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;z-index:5;top:-1px;\">"+
+															"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;top:-1px;\">"+
 															"<img id=\"right"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;right:6px;top:-1px;\">"+
 														"</div>"+
 														"<div id=\"myBar"+i +"\" style=\"width:"+ percent+"%;height:30px;background-color:green;border-radius:10px\">"+
@@ -445,7 +445,7 @@ function setUpInvasions(){
 													"<p class = \"invasionsGreenRight\" id=\"rightDrop"+i+"\">"+ invData[i].defenderReward.countedItems[0].type + "</p>"+
 													"<div  id=\"myProgress"+i +"\" style=\"width:99%;background-color:red;border-radius:10px;margin:0px 0px 10px 3px;position:absolute;top:25px;\">"+
 														"<div id=\"container\">"+
-															"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;z-index:5;top:-1px;\">"+
+															"<img id=\"left"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;left:5px;top:-1px;\">"+
 															"<img id=\"right"+i+"\" + src=\"./grineer.png\" style=\"height:33px;position:absolute;right:6px;top:-1px;\">"+
 														"</div>"+
 														"<div id=\"myBar"+i +"\" style=\"width:"+ percent+"%;height:30px;background-color:green;border-radius:10px\">"+
